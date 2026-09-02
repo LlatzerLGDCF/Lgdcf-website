@@ -29,20 +29,6 @@
                             emerald: '#34d399',
                             indigo: '#818cf8',
                         }
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.4' },
-                            '50%': { opacity: '0.8' },
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'glow-pulse': 'pulseGlow 4s ease-in-out infinite',
                     }
                 }
             }
@@ -51,10 +37,10 @@
 </head>
 <body class="bg-deep-bg text-slate-100 font-sans antialiased selection:bg-deep-cyan selection:text-slate-950 relative overflow-x-hidden">
 
-    <!-- Ambient Glow Background -->
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-deep-cyan/10 rounded-full blur-[120px] pointer-events-none animate-glow-pulse"></div>
+    <!-- Ambient Lighting Glow -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-deep-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
 
-    <!-- Navigation Header -->
+    <!-- Header Navigation -->
     <header class="border-b border-slate-800/80 bg-deep-bg/90 backdrop-blur-xl sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
             <div class="flex items-center space-x-3">
@@ -63,7 +49,7 @@
                 </div>
                 <div>
                     <span class="font-bold text-sm sm:text-base tracking-tight text-white block leading-none">LGDCF <span class="text-deep-cyan font-mono text-[10px]">SEMICONDUCTORS</span></span>
-                    <span class="text-[9px] text-slate-500 font-mono tracking-wider uppercase block mt-0.5">Fabless Thermal IP</span>
+                    <span class="text-[9px] text-slate-500 font-mono tracking-wider uppercase block mt-0.5">Asset-Light DeepTech IP</span>
                 </div>
             </div>
 
@@ -74,46 +60,46 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-8 sm:pt-16 sm:pb-12 text-center relative animate-fade-in-up">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full border border-deep-cyan/30 bg-deep-cyan/10 text-deep-cyan text-[11px] font-mono mb-6 shadow-inner">
-            <span class="flex h-1.5 w-1.5 rounded-full bg-deep-cyan animate-ping"></span>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-10 text-center relative">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full border border-deep-cyan/30 bg-deep-cyan/10 text-deep-cyan text-[11px] font-mono mb-6">
+            <span class="flex h-1.5 w-1.5 rounded-full bg-deep-cyan animate-pulse"></span>
             <span>TRL 2 Architecture &bull; PE-ALD AlN/TiN &amp; CUDA BTE</span>
         </div>
         
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-            Pioneering Sub-10nm Phonon Transport &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-deep-cyan via-slate-100 to-deep-emerald">GaN-on-Diamond</span> Thermal Solvers
+            Unlocking Nanoscale Heat Dissipation in <span class="text-transparent bg-clip-text bg-gradient-to-r from-deep-cyan via-slate-100 to-deep-emerald">GaN-on-Diamond</span> Semiconductors
         </h1>
         
         <p class="mt-5 text-xs sm:text-base text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Addressing fundamental Thermal Boundary Resistance (TBR) in high-power RF and AI hardware packaging through GPU-accelerated Boltzmann transport modeling and ALD interlayer IP.
+            Eliminating the thermal boundary bottleneck in next-generation RF radar, aerospace, and AI hardware through GPU-accelerated Boltzmann transport modeling and ALD interfacial engineering.
         </p>
 
         <!-- KPI Metrics Strip -->
-        <div class="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border hover:border-deep-cyan/50 hover:scale-[1.02] transition-all">
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border">
                 <div class="text-xl font-bold text-deep-cyan font-mono">&le; 1.8&times;10⁻⁸</div>
                 <div class="text-[10px] text-slate-400 font-mono mt-0.5">Target TBR (m²K/W)</div>
             </div>
-            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border hover:border-deep-emerald/50 hover:scale-[1.02] transition-all">
+            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border">
                 <div class="text-xl font-bold text-deep-emerald font-mono">&gt; 8.0&times;</div>
                 <div class="text-[10px] text-slate-400 font-mono mt-0.5">CUDA Speedup vs CPU</div>
             </div>
-            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border hover:border-deep-indigo/50 hover:scale-[1.02] transition-all">
+            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border">
                 <div class="text-xl font-bold text-deep-indigo font-mono">3.5nm / 1.0nm</div>
                 <div class="text-[10px] text-slate-400 font-mono mt-0.5">PE-ALD AlN/TiN Stack</div>
             </div>
-            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border hover:border-slate-400/50 hover:scale-[1.02] transition-all">
+            <div class="p-3.5 rounded-xl bg-deep-card border border-deep-border">
                 <div class="text-xl font-bold text-slate-200 font-mono">100mm</div>
                 <div class="text-[10px] text-slate-400 font-mono mt-0.5">Wafer Integration Target</div>
             </div>
         </div>
     </section>
 
-    <!-- Architecture Section -->
+    <!-- Problem vs Solution (DeepTech Standard) -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-t border-slate-800/60">
         <div class="grid md:grid-cols-2 gap-6">
             
-            <div class="p-6 rounded-2xl bg-deep-card border border-deep-border hover:border-deep-cyan/40 transition-all">
+            <div class="p-6 rounded-2xl bg-deep-card border border-deep-border">
                 <div class="text-deep-cyan font-mono text-[11px] tracking-wider mb-2">PRODUCT A &bull; SOFTWARE EDA IP</div>
                 <h3 class="text-xl font-bold text-white mb-3">CUDA 3D BTE Physics Engine</h3>
                 <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
@@ -126,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="p-6 rounded-2xl bg-deep-card border border-deep-border hover:border-deep-emerald/40 transition-all">
+            <div class="p-6 rounded-2xl bg-deep-card border border-deep-border">
                 <div class="text-deep-emerald font-mono text-[11px] tracking-wider mb-2">PRODUCT B &bull; HARDWARE PROCESS IP</div>
                 <h3 class="text-xl font-bold text-white mb-3">PE-ALD Sub-10nm Interlayer Recipe</h3>
                 <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
@@ -142,7 +128,7 @@
         </div>
     </section>
 
-    <!-- Code Block -->
+    <!-- Code Block / Engineering Evidence -->
     <section id="solver" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
         <div class="p-4 sm:p-5 rounded-2xl bg-slate-950 border border-slate-800 w-full overflow-hidden shadow-2xl">
             <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
@@ -169,53 +155,40 @@ TBR_TARGET = <span class="text-amber-300">1.5e-8</span> <span class="text-slate-
         </div>
     </section>
 
-    <!-- Industrial Benchmarks -->
+    <!-- Industrial Applications -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 border-t border-slate-800/60">
         <div class="text-center mb-8">
-            <h2 class="text-[10px] font-mono text-deep-cyan uppercase tracking-widest mb-1">// INDUSTRIAL VALIDATION LAYOUTS</h2>
-            <p class="text-2xl font-bold text-white">Target Foundry Benchmarks</p>
+            <h2 class="text-[10px] font-mono text-deep-cyan uppercase tracking-widest mb-1">// TARGET MARKETS &amp; APPLICATIONS</h2>
+            <p class="text-2xl font-bold text-white">Commercial Integration Focus</p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
             <div class="p-4 rounded-xl bg-deep-card border border-deep-border">
-                <div class="text-[10px] font-mono text-deep-cyan mb-1">LAYOUT 01</div>
-                <div class="text-slate-100 font-bold text-sm">UMS GH25</div>
-                <div class="text-slate-400 text-xs mt-1 font-mono">0.25&mu;m Gate Length<br>10 W/mm Dissipation</div>
+                <div class="text-[10px] font-mono text-deep-cyan mb-1">DEFENSE &amp; RADAR</div>
+                <div class="text-slate-100 font-bold text-sm">AESA Transceivers</div>
+                <div class="text-slate-400 text-xs mt-1 font-mono">High power-density GaN HEMT modules.</div>
             </div>
             <div class="p-4 rounded-xl bg-deep-card border border-deep-border">
-                <div class="text-[10px] font-mono text-deep-cyan mb-1">LAYOUT 02</div>
-                <div class="text-slate-100 font-bold text-sm">Wolfspeed CGHV</div>
-                <div class="text-slate-400 text-xs mt-1 font-mono">0.40&mu;m Gate Length<br>15 W/mm Dissipation</div>
+                <div class="text-[10px] font-mono text-deep-cyan mb-1">AEROSPACE</div>
+                <div class="text-slate-100 font-bold text-sm">SatCom Amplifiers</div>
+                <div class="text-slate-400 text-xs mt-1 font-mono">Ka/Ku band thermal management.</div>
             </div>
             <div class="p-4 rounded-xl bg-deep-card border border-deep-border">
-                <div class="text-[10px] font-mono text-deep-emerald mb-1">SUBSTRATE</div>
-                <div class="text-slate-100 font-bold text-sm">CVD Diamond</div>
-                <div class="text-slate-400 text-xs mt-1 font-mono">100&mu;m Thickness<br>&kappa; = 2000 W/m-K</div>
+                <div class="text-[10px] font-mono text-deep-emerald mb-1">AI HARDWARE</div>
+                <div class="text-slate-100 font-bold text-sm">Power Delivery ICs</div>
+                <div class="text-slate-400 text-xs mt-1 font-mono">Sub-10nm package heat extraction.</div>
             </div>
             <div class="p-4 rounded-xl bg-deep-card border border-deep-border">
                 <div class="text-[10px] font-mono text-deep-indigo mb-1">METROLOGY</div>
-                <div class="text-slate-100 font-bold text-sm">TDTR Laser</div>
-                <div class="text-slate-400 text-xs mt-1 font-mono">Thermal Reflectance<br>Empirical Validation</div>
+                <div class="text-slate-100 font-bold text-sm">TDTR Validation</div>
+                <div class="text-slate-400 text-xs mt-1 font-mono">Optical thermal characterization.</div>
             </div>
         </div>
     </section>
 
-    <!-- Institutional DeepTech Footer -->
-    <footer class="border-t border-slate-800/80 py-10 bg-deep-bg text-xs font-mono text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-3">
-                <div class="h-6 w-6 rounded bg-slate-900 border border-slate-800 flex items-center justify-center font-bold text-slate-300 text-xs">L</div>
-                <span class="text-slate-300 font-sans font-semibold text-sm">LGDCF Semiconductors Corp.</span>
-            </div>
-            <div class="text-center md:text-left text-[11px] text-slate-500">
-                Fabless Thermal Physics IP &bull; Sub-10nm Interfacial Engineering
-            </div>
-            <div class="flex items-center space-x-4 text-[11px]">
-                <a href="mailto:contact@lgdcf.com" class="text-deep-cyan hover:underline">contact@lgdcf.com</a>
-                <span class="text-slate-700">&bull;</span>
-                <span>&copy; 2026 LGDCF Corp. All rights reserved.</span>
-            </div>
-        </div>
+    <!-- Corrected Legal Footer -->
+    <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
+        &copy; 2026 LGDCF Semiconductors. All rights reserved. &bull; Asset-Light IP Provider &bull; contact@lgdcf.com
     </footer>
 
 </body>
